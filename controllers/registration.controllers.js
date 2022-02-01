@@ -1,5 +1,9 @@
 const { registerRecord } = require("../routes/registration.models");
 
+function getRegisters(req, res) {
+  res.status(200).json(registerRecord);
+}
+
 function postRegisters(req, res) {
   const newRegisters = {
     constactPerson: req.body.contactPerson,
@@ -11,10 +15,6 @@ function postRegisters(req, res) {
   registerRecord.push(newRegisters);
   res.status(200).json(newRegisters);
   console.log(newRegisters);
-}
-
-function getRegisters(req, res) {
-  res.status(200).json(registerRecord);
 }
 
 module.exports = {

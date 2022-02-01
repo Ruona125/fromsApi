@@ -15,9 +15,6 @@ const server = http.createServer(app);
 // });
 app.use(bodyParser.json());
 
-app.use("/billing", billingRouter);
-app.use("/register", registerRouter);
-
 server.listen(PORT, () => {
   console.log(`listening to port ${PORT}`);
 });
