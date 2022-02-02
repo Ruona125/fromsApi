@@ -3,9 +3,6 @@ const bodyParser = require("body-parser");
 
 const { app } = require("./app");
 
-const { billingRouter } = require("./routes/billing.route");
-const { registerRouter } = require("./routes/registration.route");
-
 const PORT = 3000;
 
 const server = http.createServer(app);

@@ -5,6 +5,11 @@ function getRegisters(req, res) {
 }
 
 function postRegisters(req, res) {
+  if (!req.body.contactPerson) {
+    return res.status(400).json({
+      error: "Missing contact person",
+    });
+  }
   const newRegisters = {
     constactPerson: req.body.contactPerson,
     BusinessName: req.body.BusinessName,
@@ -13,7 +18,7 @@ function postRegisters(req, res) {
     state: req.body.state,
   };
   registerRecord.push(newRegisters);
-  res.status(200).json(newRegisters);
+  res.status(201).json(newRegisters);
   console.log(newRegisters);
 }
 
