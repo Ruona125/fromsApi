@@ -17,8 +17,8 @@ function postBilling(req, res) {
     city: req.body.city,
   };
   billings.push(newBilling);
-  res.json(newBilling);
-  console.log(newBilling);
+  res.status(201).json(newBilling);
+  console.log(billings);
 }
 
 module.exports = {
