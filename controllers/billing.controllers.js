@@ -1,7 +1,7 @@
 const { billings } = require("../routes/billling.models.js");
 
 function getBilling(req, res) {
-  res.status(200).json("Welcome to billing page");
+  res.status(200).json(billings);
 }
 
 function postBilling(req, res) {
@@ -25,3 +25,7 @@ module.exports = {
   getBilling,
   postBilling,
 };
+
+//Pj7OqVsBOrtfsDFF
+
+//V5TL1lprxR1FP2aD
