@@ -1,4 +1,4 @@
-const { registerRecord } = require("../routes/registration.models");
+const { registerRecord } = require("../models/registration.models");
 
 function getRegisters(req, res) {
   res.status(200).json(registerRecord);

@@ -1,4 +1,4 @@
-const { billings } = require("../routes/billling.models.js");
+const { billings } = require("../models/billling.models.js");
 
 function getBilling(req, res) {
   res.status(200).json(billings);

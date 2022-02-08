@@ -1,9 +1,9 @@
 const http = require("http");
+require("dotenv").config();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-MONGO_URL =
-  "mongodb+srv://form-project:Pj7OqVsBOrtfsDFF@form-project.t9qjo.mongodb.net/form-project?retryWrites=true&w=majority";
+MONGO_URL = process.env.MONGO_URL;
 
 const { app } = require("./app");
 
